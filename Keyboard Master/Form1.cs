@@ -21,5 +21,12 @@ namespace Keyboard_Master
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int time = 0;
+            time++;
+            showTime.Text = time.ToString();
+        }
     }
 }
