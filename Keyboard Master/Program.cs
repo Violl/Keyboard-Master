@@ -14,7 +14,6 @@ namespace Keyboard_Master
         [STAThread]
         static void Main()
         {
-            int time;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

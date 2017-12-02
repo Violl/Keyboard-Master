@@ -12,6 +12,8 @@ namespace Keyboard_Master
 {
     public partial class Form1 : Form
     {
+        int time = 0;
+        
         public Form1()
         {
             InitializeComponent();
@@ -22,11 +24,18 @@ namespace Keyboard_Master
 
         }
 
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            startButton.Hide();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int time = 0;
             time++;
-            showTime.Text = time.ToString();
+            showTime.Text = time + " " ; 
         }
+
+
     }
 }
