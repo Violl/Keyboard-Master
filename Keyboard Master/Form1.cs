@@ -21,13 +21,7 @@ namespace Keyboard_Master
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void startButton_Click(object sender, EventArgs e)
-        {
-            timer1.Start();
-            startButton.Hide();
+            showMenu();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -36,6 +30,38 @@ namespace Keyboard_Master
             showTime.Text = time + " " ; 
         }
 
+        private void showMenu()
+        {
+            user.Hide();
+            pauseButton.Hide();
+            word.Hide();
+            wordPointer.Hide();
+            showTime.Hide();
+        }
+        
+        private void hideMenu()
+        {
+            timer1.Start();
+            startButton.Hide();
+            exitButton.Hide();
+            gameButton.Hide();
+            title.Hide();
+            user.Show();
+            pauseButton.Show();
+            word.Show();
+            wordPointer.Show();
+            showTime.Show();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void startButton_Click_1(object sender, EventArgs e)
+        {
+            hideMenu();
+        }
 
     }
 }

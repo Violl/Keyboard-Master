@@ -63,6 +63,30 @@ namespace Keyboard_Master.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_background {
+            get {
+                object obj = ResourceManager.GetObject("button_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to blue
+        ///red
+        ///green
+        ///yellow
+        ///black
+        ///white.
+        /// </summary>
+        internal static string listaSlowAngielskich {
+            get {
+                return ResourceManager.GetString("listaSlowAngielskich", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pointer {
             get {
                 object obj = ResourceManager.GetObject("pointer", resourceCulture);
@@ -76,6 +100,16 @@ namespace Keyboard_Master.Properties {
         internal static System.Drawing.Bitmap statek {
             get {
                 object obj = ResourceManager.GetObject("statek", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap title {
+            get {
+                object obj = ResourceManager.GetObject("title", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
