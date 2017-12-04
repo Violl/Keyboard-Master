@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.user = new System.Windows.Forms.PictureBox();
-            this.wordPointer = new System.Windows.Forms.PictureBox();
-            this.word = new System.Windows.Forms.Label();
             this.showTime = new System.Windows.Forms.Label();
             this.pauseButton = new System.Windows.Forms.PictureBox();
             this.wordTime = new System.Windows.Forms.Timer(this.components);
@@ -41,13 +39,10 @@
             this.gameButton = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
-            this.slowo2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gameTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.user)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wordPointer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.title)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -65,35 +60,13 @@
             this.user.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.user.TabIndex = 5;
             this.user.TabStop = false;
-            // 
-            // wordPointer
-            // 
-            this.wordPointer.BackColor = System.Drawing.Color.Transparent;
-            this.wordPointer.Image = global::Keyboard_Master.Properties.Resources.pointer;
-            this.wordPointer.Location = new System.Drawing.Point(237, 141);
-            this.wordPointer.Name = "wordPointer";
-            this.wordPointer.Size = new System.Drawing.Size(28, 28);
-            this.wordPointer.TabIndex = 6;
-            this.wordPointer.TabStop = false;
-            // 
-            // word
-            // 
-            this.word.AutoSize = true;
-            this.word.BackColor = System.Drawing.Color.Transparent;
-            this.word.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.word.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.word.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.word.Location = new System.Drawing.Point(217, 110);
-            this.word.Name = "word";
-            this.word.Size = new System.Drawing.Size(83, 28);
-            this.word.TabIndex = 7;
-            this.word.Tag = "word";
-            this.word.Text = "label1";
+            this.user.Tag = "user";
             // 
             // showTime
             // 
             this.showTime.AutoSize = true;
             this.showTime.BackColor = System.Drawing.Color.Transparent;
+            this.showTime.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.showTime.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.showTime.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.showTime.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -117,7 +90,7 @@
             // 
             // wordTime
             // 
-            this.wordTime.Interval = 10;
+            this.wordTime.Interval = 1500;
             this.wordTime.Tick += new System.EventHandler(this.wordTime_Tick);
             // 
             // startButton
@@ -177,29 +150,9 @@
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // slowo2
+            // gameTimer
             // 
-            this.slowo2.AutoSize = true;
-            this.slowo2.BackColor = System.Drawing.Color.Transparent;
-            this.slowo2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.slowo2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.slowo2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.slowo2.Location = new System.Drawing.Point(735, 206);
-            this.slowo2.Name = "slowo2";
-            this.slowo2.Size = new System.Drawing.Size(83, 28);
-            this.slowo2.TabIndex = 16;
-            this.slowo2.Tag = "word";
-            this.slowo2.Text = "label1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Keyboard_Master.Properties.Resources.pointer;
-            this.pictureBox1.Location = new System.Drawing.Point(740, 237);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
             // Form1
             // 
@@ -208,16 +161,12 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = global::Keyboard_Master.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.slowo2);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.title);
             this.Controls.Add(this.gameButton);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.pauseButton);
             this.Controls.Add(this.showTime);
-            this.Controls.Add(this.word);
-            this.Controls.Add(this.wordPointer);
             this.Controls.Add(this.user);
             this.Name = "Form1";
             this.ShowIcon = false;
@@ -226,10 +175,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.user)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wordPointer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.title)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,8 +184,6 @@
 
         #endregion
         private System.Windows.Forms.PictureBox user;
-        private System.Windows.Forms.PictureBox wordPointer;
-        private System.Windows.Forms.Label word;
         public System.Windows.Forms.Label showTime;
         public System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pauseButton;
@@ -247,8 +192,7 @@
         private System.Windows.Forms.PictureBox title;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button gameButton;
-        private System.Windows.Forms.Label slowo2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer gameTimer;
     }
 }
 

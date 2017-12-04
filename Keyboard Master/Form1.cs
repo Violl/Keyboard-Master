@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using System.IO;
 using System.Resources;
 
@@ -17,6 +18,8 @@ namespace Keyboard_Master
     {
         int wordNumber = 0;
         bool poprawne = false;
+        bool fromLeft;
+        bool fromRight;
         string slowoSprawdzane;
         int time = 0;
         int speed = 5;
@@ -26,10 +29,13 @@ namespace Keyboard_Master
         Random randomX = new Random();
         bool pauseButtonBool = false;
         string[] slowa = File.ReadAllLines("listaSlowAngielskich.txt");
+        int slowaWPliku = File.ReadAllLines("listaSlowAngielskich.txt").Length;
+
 
         public Form1()
         {
             InitializeComponent();
+            resetGame();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -48,21 +54,10 @@ namespace Keyboard_Master
             Application.Exit();
         }
 
-        private void moveEnemies()
-        {
-            foreach ( Control enemy in this.Controls)
-            if (enemy is PictureBox && enemy.Tag == word)
-                {
-
-                }
-        }
-
         private void showMenu()
         {
             user.Hide();
             pauseButton.Hide();
-            word.Hide();
-            wordPointer.Hide();
             showTime.Hide();
         }
 
@@ -75,8 +70,6 @@ namespace Keyboard_Master
             title.Hide();
             user.Show();
             pauseButton.Show();
-            word.Show();
-            wordPointer.Show();
             showTime.Show();
         }
 
@@ -113,34 +106,62 @@ namespace Keyboard_Master
             }
         }
 
-
-
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.B)
-                poprawne = true;
+            if (e.KeyCode == Keys.Escape)
+                this.Close();
         }
 
         private void wordTime_Tick(object sender, EventArgs e)
         {
-            if (poprawne == true)
+            generujSlowa(1);
+        }
+
+        private void gameTimer_Tick(object sender, EventArgs e)
+        {
+            foreach (Control enemy in this.Controls)
             {
-                slowoSprawdzane.Remove(0, 1);
-                word.Text = slowoSprawdzane;
-
+                if (enemy is Label && (string)enemy.Tag == "word")
+                {
+                    enemy.Top += speed;
+                    if (enemy.Top + enemy.Height > this.ClientSize.Height)
+                    {
+                        exitButton.Show();
+                    }
+                }
             }
-
         }
 
 
         private void startButton_Click(object sender, EventArgs e)
         {
             timer1.Start();
+            gameTimer.Start();
             wordTime.Start();
             hideMenu();
-            slowoSprawdzane = slowa[0];
-            word.Text = slowoSprawdzane;
-            slowo2.Text = slowa[1];
+
         }
+        
+        private void generujSlowa(int ilosc)
+        {
+            Label[] labelSlowa = new Label[slowaWPliku];
+
+            for (int i = 0; i < slowaWPliku; i++)
+            {
+                labelSlowa[i] = new Label();
+                labelSlowa[i].Tag = "word";
+                labelSlowa[i].Text = slowa[i];
+                labelSlowa[i].Font = showTime.Font;
+                labelSlowa[i].BackColor = showTime.BackColor;
+                labelSlowa[i].ForeColor = showTime.ForeColor;
+                labelSlowa[i].Left = randomX.Next(180, 750);
+            }
+            for (int i = 0; i < ilosc; i++)
+            {
+                Random cyfra = new Random();
+                this.Controls.Add(labelSlowa[cyfra.Next(0, slowaWPliku)]);
+            }
+        }
+
     }
 }
