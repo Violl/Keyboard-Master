@@ -90,7 +90,7 @@
             // 
             // wordTime
             // 
-            this.wordTime.Interval = 1500;
+            this.wordTime.Interval = 2500;
             this.wordTime.Tick += new System.EventHandler(this.wordTime_Tick);
             // 
             // startButton

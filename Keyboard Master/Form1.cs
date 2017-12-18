@@ -30,12 +30,15 @@ namespace Keyboard_Master
         bool pauseButtonBool = false;
         string[] slowa = File.ReadAllLines("listaSlowAngielskich.txt");
         int slowaWPliku = File.ReadAllLines("listaSlowAngielskich.txt").Length;
+        string[] slowaWGrze;
+        int liczbaSlowWGrze;
 
 
         public Form1()
         {
             InitializeComponent();
             resetGame();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -110,11 +113,30 @@ namespace Keyboard_Master
         {
             if (e.KeyCode == Keys.Escape)
                 this.Close();
+
+            foreach (Control enemy in Controls)
+            {
+                if (enemy is Label && (string)enemy.Tag == "word")
+                {
+                    string slowoObecne;
+                    slowoObecne = (string)enemy.Text;
+                    if (slowoObecne[0].Equals(e.KeyCode))
+                    {
+                        this.Close();
+                    }
+                }
+            }
+            
         }
 
         private void wordTime_Tick(object sender, EventArgs e)
         {
-            generujSlowa(1);
+            //for (int i = 0; i < 20; i++)
+           // {
+                generujSlowa(1);
+           // }
+            
+
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
@@ -128,7 +150,11 @@ namespace Keyboard_Master
                     {
                         exitButton.Show();
                     }
+
+
                 }
+
+
             }
         }
 
@@ -145,9 +171,12 @@ namespace Keyboard_Master
         private void generujSlowa(int ilosc)
         {
             Label[] labelSlowa = new Label[slowaWPliku];
+            liczbaSlowWGrze = 0;
 
             for (int i = 0; i < slowaWPliku; i++)
             {
+                slowaWGrze[liczbaSlowWGrze] = slowa[i];
+
                 labelSlowa[i] = new Label();
                 labelSlowa[i].Tag = "word";
                 labelSlowa[i].Text = slowa[i];
@@ -162,6 +191,16 @@ namespace Keyboard_Master
                 this.Controls.Add(labelSlowa[cyfra.Next(0, slowaWPliku)]);
             }
         }
+
+        /*private bool literkaPoprawna()
+        {
+            bool poprawna;
+            if()
+            {
+
+            }
+            return poprawna;
+        }*/
 
     }
 }
