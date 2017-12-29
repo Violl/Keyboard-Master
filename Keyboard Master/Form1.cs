@@ -22,7 +22,7 @@ namespace Keyboard_Master
         bool fromRight;
         string slowoSprawdzane;
         int time = 0;
-        int speed = 5;
+        int speed = 10;
         int score = 0;
         char pressedKey;
         Random randomY = new Random();
@@ -118,6 +118,7 @@ namespace Keyboard_Master
             {
                 if (enemy is Label && (string)enemy.Tag == "word")
                 {
+                    //exitButton.Show();
                     string slowoObecne;
                     slowoObecne = (string)enemy.Text;
                     if (slowoObecne[0].Equals(e.KeyCode))
@@ -173,10 +174,9 @@ namespace Keyboard_Master
             Label[] labelSlowa = new Label[slowaWPliku];
             liczbaSlowWGrze = 0;
 
-            for (int i = 0; i < slowaWPliku; i++)
-            {
-                slowaWGrze[liczbaSlowWGrze] = slowa[i];
 
+            for (int i = 0; i < (ilosc+1); i++)
+            {
                 labelSlowa[i] = new Label();
                 labelSlowa[i].Tag = "word";
                 labelSlowa[i].Text = slowa[i];
@@ -184,8 +184,8 @@ namespace Keyboard_Master
                 labelSlowa[i].BackColor = showTime.BackColor;
                 labelSlowa[i].ForeColor = showTime.ForeColor;
                 labelSlowa[i].Left = randomX.Next(180, 750);
-            }
-            for (int i = 0; i < ilosc; i++)
+            }\\ 
+            for (int i = 0; i < (ilosc + 1); i++)
             {
                 Random cyfra = new Random();
                 this.Controls.Add(labelSlowa[cyfra.Next(0, slowaWPliku)]);
