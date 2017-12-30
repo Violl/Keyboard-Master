@@ -40,6 +40,7 @@
             this.title = new System.Windows.Forms.PictureBox();
             this.exitButton = new System.Windows.Forms.Button();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.showScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.user)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.title)).BeginInit();
@@ -71,8 +72,9 @@
             this.showTime.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.showTime.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.showTime.Location = new System.Drawing.Point(859, 23);
+            this.showTime.MinimumSize = new System.Drawing.Size(0, 45);
             this.showTime.Name = "showTime";
-            this.showTime.Size = new System.Drawing.Size(97, 39);
+            this.showTime.Size = new System.Drawing.Size(97, 45);
             this.showTime.TabIndex = 8;
             this.showTime.Text = "Time: 0";
             this.showTime.UseCompatibleTextRendering = true;
@@ -95,8 +97,11 @@
             // 
             // startButton
             // 
+            this.startButton.AutoEllipsis = true;
             this.startButton.BackColor = System.Drawing.Color.Transparent;
-            this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.startButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.startButton.FlatAppearance.BorderSize = 0;
+            this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.startButton.Image = global::Keyboard_Master.Properties.Resources.button_background;
@@ -112,7 +117,8 @@
             // gameButton
             // 
             this.gameButton.BackColor = System.Drawing.Color.Transparent;
-            this.gameButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.gameButton.FlatAppearance.BorderSize = 0;
+            this.gameButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gameButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.gameButton.Image = global::Keyboard_Master.Properties.Resources.button_background;
@@ -123,6 +129,7 @@
             this.gameButton.Tag = "przycisk";
             this.gameButton.Text = "TRYB GRY";
             this.gameButton.UseVisualStyleBackColor = false;
+            this.gameButton.Click += new System.EventHandler(this.gameButton_Click_1);
             // 
             // title
             // 
@@ -137,7 +144,8 @@
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.Transparent;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.exitButton.Image = global::Keyboard_Master.Properties.Resources.button_background;
@@ -154,6 +162,19 @@
             // 
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
+            // showScore
+            // 
+            this.showScore.AutoEllipsis = true;
+            this.showScore.AutoSize = true;
+            this.showScore.BackColor = System.Drawing.Color.Transparent;
+            this.showScore.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold);
+            this.showScore.ForeColor = System.Drawing.Color.White;
+            this.showScore.Location = new System.Drawing.Point(853, 62);
+            this.showScore.Name = "showScore";
+            this.showScore.Size = new System.Drawing.Size(107, 33);
+            this.showScore.TabIndex = 16;
+            this.showScore.Text = "Score: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,6 +182,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = global::Keyboard_Master.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.showScore);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.title);
             this.Controls.Add(this.gameButton);
@@ -188,11 +210,12 @@
         public System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pauseButton;
         private System.Windows.Forms.Timer wordTime;
-        private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.PictureBox title;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button gameButton;
         private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Label showScore;
+        private System.Windows.Forms.Button startButton;
     }
 }
 

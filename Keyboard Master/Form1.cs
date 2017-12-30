@@ -16,45 +16,28 @@ namespace Keyboard_Master
 
     public partial class Form1 : Form
     {
-        int wordNumber = 0;
         bool poprawne = false;
-        bool fromLeft;
-        bool fromRight;
         string slowoSprawdzane;
         int time = 0;
-        int speed = 10;
+        int tryb = 1;
+        int speed = 5;
         int score = 0;
-        char pressedKey;
         Random randomY = new Random();
         Random randomX = new Random();
         bool pauseButtonBool = false;
         string[] slowa = File.ReadAllLines("listaSlowAngielskich.txt");
-        int slowaWPliku = File.ReadAllLines("listaSlowAngielskich.txt").Length;
-        string[] slowaWGrze;
-        int liczbaSlowWGrze;
-
+        static int slowaWPliku = File.ReadAllLines("listaSlowAngielskich.txt").Length;
+        Label[] labelSlowa = new Label[slowaWPliku];
 
         public Form1()
         {
             InitializeComponent();
-            resetGame();
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             showMenu();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            time++;
-            showTime.Text = "Time: " + time;
-        }
-
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            stworzLabele();
         }
 
         private void showMenu()
@@ -76,18 +59,6 @@ namespace Keyboard_Master
             showTime.Show();
         }
 
-        private void resetGame()
-        {
-
-        }
-
-        private string getWord(int wordNumber)
-        {
-            string word = slowa[wordNumber];    //sprawdzic pod kątem tych samych nazw
-            slowoSprawdzane = slowa[wordNumber];
-            return word; 
-        }
-
         private void pauseButton_Click(object sender, EventArgs e)
         {
             pauseButtonBool = true;
@@ -99,7 +70,7 @@ namespace Keyboard_Master
 
         private void gameButton_Click(object sender, EventArgs e)
         {
-            if(pauseButtonBool == true)
+            if (pauseButtonBool == true)
             {
                 timer1.Start();
                 wordTime.Start();
@@ -109,35 +80,85 @@ namespace Keyboard_Master
             }
         }
 
+        private void gameButton_Click_1(object sender, EventArgs e)
+        {
+            switch (tryb)
+            {
+                case 1:
+                    slowa = File.ReadAllLines("listaSlowAngielskich.txt");
+                    break;
+                case 2:
+                    slowa = File.ReadAllLines("listaSlowPolskich.txt");
+                    break;
+                default:
+                    slowa = File.ReadAllLines("listaSlowAngielskich.txt");
+                    break;
+
+
+            }
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            gameTimer.Start();
+            wordTime.Start();
+            hideMenu();
+
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            string key = e.KeyCode.ToString().ToLower();
+            literaPoprawna(key);
+
             if (e.KeyCode == Keys.Escape)
                 this.Close();
-
-            foreach (Control enemy in Controls)
-            {
-                if (enemy is Label && (string)enemy.Tag == "word")
-                {
-                    //exitButton.Show();
-                    string slowoObecne;
-                    slowoObecne = (string)enemy.Text;
-                    if (slowoObecne[0].Equals(e.KeyCode))
-                    {
-                        this.Close();
-                    }
-                }
-            }
             
+            if (poprawne == true)
+            {
+                score++;
+                showScore.Text = "Score: " + score;
+            }
+        }
+
+        private void literaPoprawna(string key)
+        {
+            foreach (Control enemy in this.Controls)
+            {
+                if (enemy is Label && (string)enemy.Tag == "word" && enemy.Text.Length > 0)
+                {
+
+                    string roboczy = enemy.Text;
+                    if (roboczy[0] == key[0])
+                    {
+                        poprawne = true;
+                        roboczy = roboczy.Remove(0, 1);
+                        enemy.Text = roboczy;
+                    }
+                    else
+                    {
+                        poprawne = false;
+                    }
+
+                }   
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            time++;
+            showTime.Text = "Time: " + time;
         }
 
         private void wordTime_Tick(object sender, EventArgs e)
         {
-            //for (int i = 0; i < 20; i++)
-           // {
-                generujSlowa(1);
-           // }
-            
-
+            generujSlowa(2);
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
@@ -151,31 +172,25 @@ namespace Keyboard_Master
                     {
                         exitButton.Show();
                     }
-
-
                 }
+            }
 
+            foreach (Control enemy in this.Controls)
+            {
+                if (enemy is Label && (string)enemy.Tag == "word")
+                {
+                    if (enemy.Text.Length < 1)
+                    {
+                        this.Controls.Remove(enemy);
+                    }
+                }
 
             }
         }
 
-
-        private void startButton_Click(object sender, EventArgs e)
+        private void stworzLabele()
         {
-            timer1.Start();
-            gameTimer.Start();
-            wordTime.Start();
-            hideMenu();
-
-        }
-        
-        private void generujSlowa(int ilosc)
-        {
-            Label[] labelSlowa = new Label[slowaWPliku];
-            liczbaSlowWGrze = 0;
-
-
-            for (int i = 0; i < (ilosc+1); i++)
+            for (int i = 0; i < slowaWPliku; i++)
             {
                 labelSlowa[i] = new Label();
                 labelSlowa[i].Tag = "word";
@@ -184,23 +199,20 @@ namespace Keyboard_Master
                 labelSlowa[i].BackColor = showTime.BackColor;
                 labelSlowa[i].ForeColor = showTime.ForeColor;
                 labelSlowa[i].Left = randomX.Next(180, 750);
-            }\\ 
-            for (int i = 0; i < (ilosc + 1); i++)
+                labelSlowa[i].AutoEllipsis = true;
+                labelSlowa[i].MinimumSize = showTime.MinimumSize;
+            }
+        }
+
+        private void generujSlowa(int ilosc)
+        {
+            
+            for (int i = 0; i < ilosc; i++)
             {
                 Random cyfra = new Random();
                 this.Controls.Add(labelSlowa[cyfra.Next(0, slowaWPliku)]);
             }
         }
-
-        /*private bool literkaPoprawna()
-        {
-            bool poprawna;
-            if()
-            {
-
-            }
-            return poprawna;
-        }*/
 
     }
 }
