@@ -19,14 +19,13 @@ namespace Keyboard_Master
         bool poprawne = false;
         string slowoSprawdzane;
         int time = 0;
-        int tryb = 1;
         int speed = 5;
         int score = 0;
         Random randomY = new Random();
         Random randomX = new Random();
         bool pauseButtonBool = false;
-        string[] slowa = File.ReadAllLines("listaSlowAngielskich.txt");
-        static int slowaWPliku = File.ReadAllLines("listaSlowAngielskich.txt").Length;
+        string[] slowa;
+        static int slowaWPliku;
         Label[] labelSlowa = new Label[slowaWPliku];
 
         public Form1()
@@ -68,6 +67,37 @@ namespace Keyboard_Master
             exitButton.Show();
         }
 
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            hideMenu();
+            jezykAngielski.Show();
+            jezykPolski.Show();
+        }
+
+        private void jezykPolski_Click(object sender, EventArgs e)
+        {
+            slowa = File.ReadAllLines("listaSlowPolskich.txt");
+            slowaWPliku = File.ReadAllLines("listaSlowPolskich.txt").Length;
+            timer1.Start();
+            gameTimer.Start();
+            wordTime.Start();
+            hideMenu();
+            jezykPolski.Hide();
+            jezykAngielski.Hide();
+        }
+
+        private void jezykAngielski_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            gameTimer.Start();
+            wordTime.Start();
+            hideMenu();
+            jezykPolski.Hide();
+            jezykAngielski.Hide();
+            slowa = File.ReadAllLines("listaSlowAngielskich.txt");
+            slowaWPliku = File.ReadAllLines("listaSlowAngielskich.txt").Length;
+        }
+
         private void gameButton_Click(object sender, EventArgs e)
         {
             if (pauseButtonBool == true)
@@ -81,30 +111,9 @@ namespace Keyboard_Master
         }
 
         private void gameButton_Click_1(object sender, EventArgs e)
-        {
-            switch (tryb)
-            {
-                case 1:
-                    slowa = File.ReadAllLines("listaSlowAngielskich.txt");
-                    break;
-                case 2:
-                    slowa = File.ReadAllLines("listaSlowPolskich.txt");
-                    break;
-                default:
-                    slowa = File.ReadAllLines("listaSlowAngielskich.txt");
-                    break;
-
-
-            }
-        }
-
-        private void startButton_Click(object sender, EventArgs e)
-        {
-            timer1.Start();
-            gameTimer.Start();
-            wordTime.Start();
-            hideMenu();
-
+        { 
+            startButton.Text = "Angielski";
+            gameButton.Text = "Polski";
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -199,7 +208,7 @@ namespace Keyboard_Master
                 labelSlowa[i].BackColor = showTime.BackColor;
                 labelSlowa[i].ForeColor = showTime.ForeColor;
                 labelSlowa[i].Left = randomX.Next(180, 750);
-                labelSlowa[i].AutoEllipsis = true;
+                labelSlowa[i].AutoSize = true;
                 labelSlowa[i].MinimumSize = showTime.MinimumSize;
             }
         }
@@ -213,6 +222,5 @@ namespace Keyboard_Master
                 this.Controls.Add(labelSlowa[cyfra.Next(0, slowaWPliku)]);
             }
         }
-
     }
 }

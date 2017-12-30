@@ -41,6 +41,8 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.showScore = new System.Windows.Forms.Label();
+            this.jezykPolski = new System.Windows.Forms.Button();
+            this.jezykAngielski = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.user)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.title)).BeginInit();
@@ -65,6 +67,7 @@
             // 
             // showTime
             // 
+            this.showTime.AutoEllipsis = true;
             this.showTime.AutoSize = true;
             this.showTime.BackColor = System.Drawing.Color.Transparent;
             this.showTime.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -175,6 +178,44 @@
             this.showScore.TabIndex = 16;
             this.showScore.Text = "Score: 0";
             // 
+            // jezykPolski
+            // 
+            this.jezykPolski.AutoEllipsis = true;
+            this.jezykPolski.BackColor = System.Drawing.Color.Transparent;
+            this.jezykPolski.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.jezykPolski.FlatAppearance.BorderSize = 0;
+            this.jezykPolski.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jezykPolski.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jezykPolski.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.jezykPolski.Image = global::Keyboard_Master.Properties.Resources.button_background;
+            this.jezykPolski.Location = new System.Drawing.Point(361, 223);
+            this.jezykPolski.Name = "jezykPolski";
+            this.jezykPolski.Size = new System.Drawing.Size(314, 97);
+            this.jezykPolski.TabIndex = 17;
+            this.jezykPolski.Tag = "przycisk";
+            this.jezykPolski.Text = "JEZYK POLSKI";
+            this.jezykPolski.UseVisualStyleBackColor = false;
+            this.jezykPolski.Visible = false;
+            this.jezykPolski.Click += new System.EventHandler(this.jezykPolski_Click);
+            // 
+            // jezykAngielski
+            // 
+            this.jezykAngielski.BackColor = System.Drawing.Color.Transparent;
+            this.jezykAngielski.FlatAppearance.BorderSize = 0;
+            this.jezykAngielski.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.jezykAngielski.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jezykAngielski.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.jezykAngielski.Image = global::Keyboard_Master.Properties.Resources.button_background;
+            this.jezykAngielski.Location = new System.Drawing.Point(361, 326);
+            this.jezykAngielski.Name = "jezykAngielski";
+            this.jezykAngielski.Size = new System.Drawing.Size(314, 97);
+            this.jezykAngielski.TabIndex = 18;
+            this.jezykAngielski.Tag = "przycisk";
+            this.jezykAngielski.Text = "JEZYK ANGIELSKI";
+            this.jezykAngielski.UseVisualStyleBackColor = false;
+            this.jezykAngielski.Visible = false;
+            this.jezykAngielski.Click += new System.EventHandler(this.jezykAngielski_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,6 +223,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = global::Keyboard_Master.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.jezykAngielski);
+            this.Controls.Add(this.jezykPolski);
             this.Controls.Add(this.showScore);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.title);
@@ -216,6 +259,8 @@
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.Label showScore;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Button jezykPolski;
+        private System.Windows.Forms.Button jezykAngielski;
     }
 }
 
