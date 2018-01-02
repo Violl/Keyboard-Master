@@ -167,7 +167,7 @@ namespace Keyboard_Master
 
         private void wordTime_Tick(object sender, EventArgs e)
         {
-            generujSlowa(2);
+            generujSlowa(1);
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
@@ -199,7 +199,7 @@ namespace Keyboard_Master
 
         private void stworzLabele()
         {
-            for (int i = 0; i < slowaWPliku; i++)
+            for (int i = 0; i < slowaWPliku-1; i++)
             {
                 labelSlowa[i] = new Label();
                 labelSlowa[i].Tag = "word";
