@@ -108,7 +108,7 @@
             this.startButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.startButton.Image = global::Keyboard_Master.Properties.Resources.button_background;
-            this.startButton.Location = new System.Drawing.Point(361, 223);
+            this.startButton.Location = new System.Drawing.Point(361, 285);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(314, 97);
             this.startButton.TabIndex = 12;
@@ -125,12 +125,12 @@
             this.gameButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.gameButton.Image = global::Keyboard_Master.Properties.Resources.button_background;
-            this.gameButton.Location = new System.Drawing.Point(361, 326);
+            this.gameButton.Location = new System.Drawing.Point(361, 285);
             this.gameButton.Name = "gameButton";
             this.gameButton.Size = new System.Drawing.Size(314, 97);
             this.gameButton.TabIndex = 13;
             this.gameButton.Tag = "przycisk";
-            this.gameButton.Text = "TRYB GRY";
+            this.gameButton.Text = "WZNOW";
             this.gameButton.UseVisualStyleBackColor = false;
             this.gameButton.Click += new System.EventHandler(this.gameButton_Click_1);
             // 
@@ -152,7 +152,7 @@
             this.exitButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.exitButton.Image = global::Keyboard_Master.Properties.Resources.button_background;
-            this.exitButton.Location = new System.Drawing.Point(361, 429);
+            this.exitButton.Location = new System.Drawing.Point(361, 397);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(314, 97);
             this.exitButton.TabIndex = 15;
@@ -224,15 +224,15 @@
             this.BackgroundImage = global::Keyboard_Master.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.showScore);
-            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.title);
-            this.Controls.Add(this.gameButton);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.pauseButton);
             this.Controls.Add(this.showTime);
             this.Controls.Add(this.user);
-            this.Controls.Add(this.jezykAngielski);
             this.Controls.Add(this.jezykPolski);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.gameButton);
+            this.Controls.Add(this.jezykAngielski);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
