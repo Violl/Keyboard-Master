@@ -223,8 +223,6 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = global::Keyboard_Master.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.jezykAngielski);
-            this.Controls.Add(this.jezykPolski);
             this.Controls.Add(this.showScore);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.title);
@@ -233,6 +231,8 @@
             this.Controls.Add(this.pauseButton);
             this.Controls.Add(this.showTime);
             this.Controls.Add(this.user);
+            this.Controls.Add(this.jezykAngielski);
+            this.Controls.Add(this.jezykPolski);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

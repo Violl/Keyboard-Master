@@ -17,7 +17,6 @@ namespace Keyboard_Master
     public partial class Form1 : Form
     {
         bool poprawne = false;
-        string slowoSprawdzane;
         int time = 0;
         int speed = 5;
         int score = 0;
@@ -25,8 +24,9 @@ namespace Keyboard_Master
         Random randomX = new Random();
         bool pauseButtonBool = false;
         string[] slowa;
-        static int slowaWPliku;
-        Label[] labelSlowa = new Label[slowaWPliku];
+        int slowaWPliku;
+        Label[] labelSlowa = new Label[100];
+
 
         public Form1()
         {
@@ -36,7 +36,6 @@ namespace Keyboard_Master
         private void Form1_Load(object sender, EventArgs e)
         {
             showMenu();
-            stworzLabele();
         }
 
         private void showMenu()
@@ -84,6 +83,7 @@ namespace Keyboard_Master
             hideMenu();
             jezykPolski.Hide();
             jezykAngielski.Hide();
+            stworzLabele();
         }
 
         private void jezykAngielski_Click(object sender, EventArgs e)
@@ -96,6 +96,7 @@ namespace Keyboard_Master
             jezykAngielski.Hide();
             slowa = File.ReadAllLines("listaSlowAngielskich.txt");
             slowaWPliku = File.ReadAllLines("listaSlowAngielskich.txt").Length;
+            stworzLabele();
         }
 
         private void gameButton_Click(object sender, EventArgs e)
@@ -154,7 +155,6 @@ namespace Keyboard_Master
                     {
                         poprawne = false;
                     }
-
                 }   
             }
         }
