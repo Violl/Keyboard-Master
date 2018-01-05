@@ -43,9 +43,11 @@
             this.showScore = new System.Windows.Forms.Label();
             this.jezykPolski = new System.Windows.Forms.Button();
             this.jezykAngielski = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.user)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.title)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -216,6 +218,17 @@
             this.jezykAngielski.Visible = false;
             this.jezykAngielski.Click += new System.EventHandler(this.jezykAngielski_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Keyboard_Master.Properties.Resources.point;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Location = new System.Drawing.Point(511, 592);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 17);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,6 +236,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImage = global::Keyboard_Master.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.showScore);
             this.Controls.Add(this.title);
             this.Controls.Add(this.startButton);
@@ -242,6 +256,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.user)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pauseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.title)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,6 +276,7 @@
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button jezykPolski;
         private System.Windows.Forms.Button jezykAngielski;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
