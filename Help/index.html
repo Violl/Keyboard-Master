@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+<title>Keyboard Master - Table of Content</title>
+<link rel="stylesheet" href="TOC.css">
+<link rel="shortcut icon" href="favicon.ico"/>
+<script type="text/javascript" src="TOC.js"></script>
+</head>
+
+<body onload="javascript: Initialize('.aspx');" onresize="javascript: ResizeTree();">
+<form id="IndexForm" runat="server">
+
+<div id="TOCDiv" class="TOCDiv">
+
+<div id="divSearchOpts" class="SearchOpts" style="height: 90px; display: none;">
+	<img class="TOCLink" onclick="javascript: ShowHideSearch(false);"
+		src="Close.png" height="24" width="24" alt="Hide Search" title="Hide Search" style="float: right;"/>
+	<span class="Title">Keyword(s) to search:</span>
+	<input id="txtSearchText" type="text" style="width: 100%;" 
+		onkeypress="javascript: return OnSearchTextKeyPress(event);" /><br />
+	<input id="chkSortByTitle" type="checkbox" /><label for="chkSortByTitle">&nbsp;Sort results by title</label>
+	<input type="button" value="Search" onclick="javascript: return PerformSearch();" style="float: right;" />
+</div>
+
+<div id="divIndexOpts" class="IndexOpts" style="height: 28px; display: none;">
+	<img class="TOCLink" onclick="javascript: ShowHideIndex(false);"
+		src="Close.png" height="24" width="24" alt="Hide Keyword Index" title="Hide Keyword Index" style="float: right;"/>
+	<span class="Title">Keyword Index</span>
+</div>
+
+<div id="divNavOpts" class="NavOpts" style="height: 28px;">
+    <img class="TOCLink" onclick="javascript: SyncTOC();" src="SyncTOC.png"
+        height="24" width="24" alt="Sync to TOC" title="Sync to TOC" />
+    <img class="TOCLink" onclick="javascript: ExpandOrCollapseAll(true);"
+        src="ExpandAll.png" height="24" width="24" alt="Expand all" title="Expand all" />
+    <img class="TOCLink" onclick="javascript: ExpandOrCollapseAll(false);"
+        src="CollapseAll.png" height="24" width="24" alt="Collapse all" title="Collapse all" />
+    <img class="TOCLink" onclick="javascript: ShowDirectLink();"
+        src="Link.png" height="24" width="24" alt="Get direct link to the displayed topic" title="Get direct link to the displayed topic" />
+    <a href="#" onclick="javascript: TopicContent.history.go(-1); return false;">
+		<img class="TOCLink" style="float: right;" 
+        src="Back.png" height="24" width="24" alt="Previous page" title="Previous page" /></a>
+</div>
+
+<div class="Tree" id="divSearchResults" style="display: none;"
+    onselectstart="javascript: return false;">
+</div>
+
+<div class="Tree" id="divIndexResults" style="display: none;"
+    onselectstart="javascript: return false;">
+</div>
+
+<div class="Tree" id="divTree" onselectstart="javascript: return false;">
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/N-Keyboard_Master.htm" target="TopicContent">Keyboard_Master Namespace</a>
+<div class="Hidden">
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/T-Keyboard_Master.Form1.htm" target="TopicContent">Form1 Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/AllMembers.T-Keyboard_Master.Form1.htm" target="TopicContent">Form1 Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.-ctor.htm" target="TopicContent">Form1 Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/Fields.T-Keyboard_Master.Form1.htm" target="TopicContent">Form1 Fields</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.bulletPicture.htm" target="TopicContent">bulletPicture Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.bullets.htm" target="TopicContent">bullets Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.components.htm" target="TopicContent">components Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.endGame.htm" target="TopicContent">endGame Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.exitButton.htm" target="TopicContent">exitButton Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.gameButton.htm" target="TopicContent">gameButton Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.gameTimer.htm" target="TopicContent">gameTimer Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.jezykAngielski.htm" target="TopicContent">jezykAngielski Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.jezykPolski.htm" target="TopicContent">jezykPolski Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.labelWords.htm" target="TopicContent">labelWords Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.lastLetter.htm" target="TopicContent">lastLetter Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.pauseButton.htm" target="TopicContent">pauseButton Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.score.htm" target="TopicContent">score Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.showScore.htm" target="TopicContent">showScore Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.showTime.htm" target="TopicContent">showTime Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.speed.htm" target="TopicContent">speed Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.startButton.htm" target="TopicContent">startButton Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.time.htm" target="TopicContent">time Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.timer1.htm" target="TopicContent">timer1 Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.title.htm" target="TopicContent">title Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.user.htm" target="TopicContent">user Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.words.htm" target="TopicContent">words Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.wordsInFile.htm" target="TopicContent">wordsInFile Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.wordsNumber.htm" target="TopicContent">wordsNumber Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Form1.wordTime.htm" target="TopicContent">wordTime Field</a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/Methods.T-Keyboard_Master.Form1.htm" target="TopicContent">Form1 Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.changeDifficulty.htm" target="TopicContent">changeDifficulty Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.clear.htm" target="TopicContent">clear Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.correctLetter.htm" target="TopicContent">correctLetter Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.createLabels.htm" target="TopicContent">createLabels Method </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/Overload-Keyboard_Master.Form1.Dispose.htm" target="TopicContent">Dispose Method </a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.Dispose.htm" target="TopicContent">Dispose Method </a>
+</div>
+</div>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.exitButton_Click.htm" target="TopicContent">exitButton_Click Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.exitGame.htm" target="TopicContent">exitGame Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.Form1_KeyDown.htm" target="TopicContent">Form1_KeyDown Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.Form1_Load.htm" target="TopicContent">Form1_Load Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.gameButton_Click_1.htm" target="TopicContent">gameButton_Click_1 Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.gameTimer_Tick.htm" target="TopicContent">gameTimer_Tick Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.generateWords.htm" target="TopicContent">generateWords Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.hideMenu.htm" target="TopicContent">hideMenu Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.InitializeComponent.htm" target="TopicContent">InitializeComponent Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.jezykAngielski_Click.htm" target="TopicContent">jezykAngielski_Click Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.jezykPolski_Click.htm" target="TopicContent">jezykPolski_Click Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.pauseButton_Click.htm" target="TopicContent">pauseButton_Click Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.scoreTable.htm" target="TopicContent">scoreTable Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.showMenu.htm" target="TopicContent">showMenu Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.startButton_Click.htm" target="TopicContent">startButton_Click Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.timer1_Tick.htm" target="TopicContent">timer1_Tick Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.turnOffTimers.htm" target="TopicContent">turnOffTimers Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.turnOnTimers.htm" target="TopicContent">turnOnTimers Method </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Form1.wordTime_Tick.htm" target="TopicContent">wordTime_Tick Method </a>
+</div>
+</div>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/Properties.T-Keyboard_Master.Form1.htm" target="TopicContent">Form1 Properties</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/Events.T-Keyboard_Master.Form1.htm" target="TopicContent">Form1 Events</a>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/T-Keyboard_Master.Program.htm" target="TopicContent">Program Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/AllMembers.T-Keyboard_Master.Program.htm" target="TopicContent">Program Members</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/Methods.T-Keyboard_Master.Program.htm" target="TopicContent">Program Methods</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Program.Main.htm" target="TopicContent">Main Method </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/N-Keyboard_Master.Properties.htm" target="TopicContent">Keyboard_Master.Properties Namespace</a>
+<div class="Hidden">
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/T-Keyboard_Master.Properties.Resources.htm" target="TopicContent">Resources Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/AllMembers.T-Keyboard_Master.Properties.Resources.htm" target="TopicContent">Resources Members</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/M-Keyboard_Master.Properties.Resources.-ctor.htm" target="TopicContent">Resources Constructor </a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/Fields.T-Keyboard_Master.Properties.Resources.htm" target="TopicContent">Resources Fields</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Properties.Resources.resourceCulture.htm" target="TopicContent">resourceCulture Field</a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Properties.Resources.resourceMan.htm" target="TopicContent">resourceMan Field</a>
+</div>
+</div>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/Methods.T-Keyboard_Master.Properties.Resources.htm" target="TopicContent">Resources Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/Properties.T-Keyboard_Master.Properties.Resources.htm" target="TopicContent">Resources Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/P-Keyboard_Master.Properties.Resources.background.htm" target="TopicContent">background Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/P-Keyboard_Master.Properties.Resources.button_background.htm" target="TopicContent">button_background Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/P-Keyboard_Master.Properties.Resources.Culture.htm" target="TopicContent">Culture Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/P-Keyboard_Master.Properties.Resources.listaSlowAngielskich.htm" target="TopicContent">listaSlowAngielskich Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/P-Keyboard_Master.Properties.Resources.point.htm" target="TopicContent">point Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/P-Keyboard_Master.Properties.Resources.pointer.htm" target="TopicContent">pointer Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/P-Keyboard_Master.Properties.Resources.ResourceManager.htm" target="TopicContent">ResourceManager Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/P-Keyboard_Master.Properties.Resources.statek.htm" target="TopicContent">statek Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/P-Keyboard_Master.Properties.Resources.title.htm" target="TopicContent">title Property </a>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/P-Keyboard_Master.Properties.Resources.znak_pauzy.htm" target="TopicContent">znak_pauzy Property </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/T-Keyboard_Master.Properties.Settings.htm" target="TopicContent">Settings Class</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/AllMembers.T-Keyboard_Master.Properties.Settings.htm" target="TopicContent">Settings Members</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/Fields.T-Keyboard_Master.Properties.Settings.htm" target="TopicContent">Settings Fields</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/F-Keyboard_Master.Properties.Settings.defaultInstance.htm" target="TopicContent">defaultInstance Field</a>
+</div>
+</div>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/Methods.T-Keyboard_Master.Properties.Settings.htm" target="TopicContent">Settings Methods</a>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="html/Properties.T-Keyboard_Master.Properties.Settings.htm" target="TopicContent">Settings Properties</a>
+<div class="Hidden">
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/P-Keyboard_Master.Properties.Settings.Default.htm" target="TopicContent">Default Property </a>
+</div>
+</div>
+</div>
+<div class="TreeItem">
+<img src="Item.gif"/><a class="UnselectedNode" onclick="javascript: return SelectNode(this);" href="html/Events.T-Keyboard_Master.Properties.Settings.htm" target="TopicContent">Settings Events</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div id="TOCSizer" class="TOCSizer" onmousedown="OnMouseDown(event)" onselectstart="javascript: return false;"></div>
+
+<iframe id="TopicContent" name="TopicContent" class="TopicContent" src="html/N-Keyboard_Master.htm">
+This page uses an IFRAME but your browser does not support it.
+</iframe>
+
+</form>
+
+</body>
+
+</html>

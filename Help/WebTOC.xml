@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="cacf3bc4-46a3-4b6c-a82d-90e839095b03" Title="Keyboard_Master Namespace" Url="html/N-Keyboard_Master.htm">
+    <HelpTOCNode Id="2d7fecf2-03a5-4b2c-b38e-da1bdf43c92d" Title="Form1 Class" Url="html/T-Keyboard_Master.Form1.htm">
+      <HelpTOCNode Title="Form1 Members" Url="html/AllMembers.T-Keyboard_Master.Form1.htm" />
+      <HelpTOCNode Title="Form1 Constructor " Url="html/M-Keyboard_Master.Form1.-ctor.htm" />
+      <HelpTOCNode Id="f44a434b-f538-474a-96b3-dcce136429eb" Title="Form1 Fields" Url="html/Fields.T-Keyboard_Master.Form1.htm">
+        <HelpTOCNode Title="bulletPicture Field" Url="html/F-Keyboard_Master.Form1.bulletPicture.htm" />
+        <HelpTOCNode Title="bullets Field" Url="html/F-Keyboard_Master.Form1.bullets.htm" />
+        <HelpTOCNode Title="components Field" Url="html/F-Keyboard_Master.Form1.components.htm" />
+        <HelpTOCNode Title="endGame Field" Url="html/F-Keyboard_Master.Form1.endGame.htm" />
+        <HelpTOCNode Title="exitButton Field" Url="html/F-Keyboard_Master.Form1.exitButton.htm" />
+        <HelpTOCNode Title="gameButton Field" Url="html/F-Keyboard_Master.Form1.gameButton.htm" />
+        <HelpTOCNode Title="gameTimer Field" Url="html/F-Keyboard_Master.Form1.gameTimer.htm" />
+        <HelpTOCNode Title="jezykAngielski Field" Url="html/F-Keyboard_Master.Form1.jezykAngielski.htm" />
+        <HelpTOCNode Title="jezykPolski Field" Url="html/F-Keyboard_Master.Form1.jezykPolski.htm" />
+        <HelpTOCNode Title="labelWords Field" Url="html/F-Keyboard_Master.Form1.labelWords.htm" />
+        <HelpTOCNode Title="lastLetter Field" Url="html/F-Keyboard_Master.Form1.lastLetter.htm" />
+        <HelpTOCNode Title="pauseButton Field" Url="html/F-Keyboard_Master.Form1.pauseButton.htm" />
+        <HelpTOCNode Title="score Field" Url="html/F-Keyboard_Master.Form1.score.htm" />
+        <HelpTOCNode Title="showScore Field" Url="html/F-Keyboard_Master.Form1.showScore.htm" />
+        <HelpTOCNode Title="showTime Field" Url="html/F-Keyboard_Master.Form1.showTime.htm" />
+        <HelpTOCNode Title="speed Field" Url="html/F-Keyboard_Master.Form1.speed.htm" />
+        <HelpTOCNode Title="startButton Field" Url="html/F-Keyboard_Master.Form1.startButton.htm" />
+        <HelpTOCNode Title="time Field" Url="html/F-Keyboard_Master.Form1.time.htm" />
+        <HelpTOCNode Title="timer1 Field" Url="html/F-Keyboard_Master.Form1.timer1.htm" />
+        <HelpTOCNode Title="title Field" Url="html/F-Keyboard_Master.Form1.title.htm" />
+        <HelpTOCNode Title="user Field" Url="html/F-Keyboard_Master.Form1.user.htm" />
+        <HelpTOCNode Title="words Field" Url="html/F-Keyboard_Master.Form1.words.htm" />
+        <HelpTOCNode Title="wordsInFile Field" Url="html/F-Keyboard_Master.Form1.wordsInFile.htm" />
+        <HelpTOCNode Title="wordsNumber Field" Url="html/F-Keyboard_Master.Form1.wordsNumber.htm" />
+        <HelpTOCNode Title="wordTime Field" Url="html/F-Keyboard_Master.Form1.wordTime.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="587d6074-e0cc-4aa4-8686-dc930f244a23" Title="Form1 Methods" Url="html/Methods.T-Keyboard_Master.Form1.htm">
+        <HelpTOCNode Title="changeDifficulty Method " Url="html/M-Keyboard_Master.Form1.changeDifficulty.htm" />
+        <HelpTOCNode Title="clear Method " Url="html/M-Keyboard_Master.Form1.clear.htm" />
+        <HelpTOCNode Title="correctLetter Method " Url="html/M-Keyboard_Master.Form1.correctLetter.htm" />
+        <HelpTOCNode Title="createLabels Method " Url="html/M-Keyboard_Master.Form1.createLabels.htm" />
+        <HelpTOCNode Id="c6632da7-1cdb-46a7-bbcd-d79013c6b992" Title="Dispose Method " Url="html/Overload-Keyboard_Master.Form1.Dispose.htm">
+          <HelpTOCNode Title="Dispose Method " Url="html/M-Keyboard_Master.Form1.Dispose.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="exitButton_Click Method " Url="html/M-Keyboard_Master.Form1.exitButton_Click.htm" />
+        <HelpTOCNode Title="exitGame Method " Url="html/M-Keyboard_Master.Form1.exitGame.htm" />
+        <HelpTOCNode Title="Form1_KeyDown Method " Url="html/M-Keyboard_Master.Form1.Form1_KeyDown.htm" />
+        <HelpTOCNode Title="Form1_Load Method " Url="html/M-Keyboard_Master.Form1.Form1_Load.htm" />
+        <HelpTOCNode Title="gameButton_Click_1 Method " Url="html/M-Keyboard_Master.Form1.gameButton_Click_1.htm" />
+        <HelpTOCNode Title="gameTimer_Tick Method " Url="html/M-Keyboard_Master.Form1.gameTimer_Tick.htm" />
+        <HelpTOCNode Title="generateWords Method " Url="html/M-Keyboard_Master.Form1.generateWords.htm" />
+        <HelpTOCNode Title="hideMenu Method " Url="html/M-Keyboard_Master.Form1.hideMenu.htm" />
+        <HelpTOCNode Title="InitializeComponent Method " Url="html/M-Keyboard_Master.Form1.InitializeComponent.htm" />
+        <HelpTOCNode Title="jezykAngielski_Click Method " Url="html/M-Keyboard_Master.Form1.jezykAngielski_Click.htm" />
+        <HelpTOCNode Title="jezykPolski_Click Method " Url="html/M-Keyboard_Master.Form1.jezykPolski_Click.htm" />
+        <HelpTOCNode Title="pauseButton_Click Method " Url="html/M-Keyboard_Master.Form1.pauseButton_Click.htm" />
+        <HelpTOCNode Title="scoreTable Method " Url="html/M-Keyboard_Master.Form1.scoreTable.htm" />
+        <HelpTOCNode Title="showMenu Method " Url="html/M-Keyboard_Master.Form1.showMenu.htm" />
+        <HelpTOCNode Title="startButton_Click Method " Url="html/M-Keyboard_Master.Form1.startButton_Click.htm" />
+        <HelpTOCNode Title="timer1_Tick Method " Url="html/M-Keyboard_Master.Form1.timer1_Tick.htm" />
+        <HelpTOCNode Title="turnOffTimers Method " Url="html/M-Keyboard_Master.Form1.turnOffTimers.htm" />
+        <HelpTOCNode Title="turnOnTimers Method " Url="html/M-Keyboard_Master.Form1.turnOnTimers.htm" />
+        <HelpTOCNode Title="wordTime_Tick Method " Url="html/M-Keyboard_Master.Form1.wordTime_Tick.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Form1 Properties" Url="html/Properties.T-Keyboard_Master.Form1.htm" />
+      <HelpTOCNode Title="Form1 Events" Url="html/Events.T-Keyboard_Master.Form1.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="2f068660-01f0-4555-a2c0-581e8d6d4ed0" Title="Program Class" Url="html/T-Keyboard_Master.Program.htm">
+      <HelpTOCNode Title="Program Members" Url="html/AllMembers.T-Keyboard_Master.Program.htm" />
+      <HelpTOCNode Id="54e1a894-ab35-4dd3-a4a1-d12d302ba33c" Title="Program Methods" Url="html/Methods.T-Keyboard_Master.Program.htm">
+        <HelpTOCNode Title="Main Method " Url="html/M-Keyboard_Master.Program.Main.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="a64be4b7-3c11-425d-93a1-d1d1557c05c1" Title="Keyboard_Master.Properties Namespace" Url="html/N-Keyboard_Master.Properties.htm">
+    <HelpTOCNode Id="19e5f38f-850e-4f0a-a764-4e4af171ea93" Title="Resources Class" Url="html/T-Keyboard_Master.Properties.Resources.htm">
+      <HelpTOCNode Title="Resources Members" Url="html/AllMembers.T-Keyboard_Master.Properties.Resources.htm" />
+      <HelpTOCNode Title="Resources Constructor " Url="html/M-Keyboard_Master.Properties.Resources.-ctor.htm" />
+      <HelpTOCNode Id="d285e734-a337-404d-a219-1a25c0396299" Title="Resources Fields" Url="html/Fields.T-Keyboard_Master.Properties.Resources.htm">
+        <HelpTOCNode Title="resourceCulture Field" Url="html/F-Keyboard_Master.Properties.Resources.resourceCulture.htm" />
+        <HelpTOCNode Title="resourceMan Field" Url="html/F-Keyboard_Master.Properties.Resources.resourceMan.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Resources Methods" Url="html/Methods.T-Keyboard_Master.Properties.Resources.htm" />
+      <HelpTOCNode Id="f3d1156c-ce2c-4560-a60e-aa2df85ec1ff" Title="Resources Properties" Url="html/Properties.T-Keyboard_Master.Properties.Resources.htm">
+        <HelpTOCNode Title="background Property " Url="html/P-Keyboard_Master.Properties.Resources.background.htm" />
+        <HelpTOCNode Title="button_background Property " Url="html/P-Keyboard_Master.Properties.Resources.button_background.htm" />
+        <HelpTOCNode Title="Culture Property " Url="html/P-Keyboard_Master.Properties.Resources.Culture.htm" />
+        <HelpTOCNode Title="listaSlowAngielskich Property " Url="html/P-Keyboard_Master.Properties.Resources.listaSlowAngielskich.htm" />
+        <HelpTOCNode Title="point Property " Url="html/P-Keyboard_Master.Properties.Resources.point.htm" />
+        <HelpTOCNode Title="pointer Property " Url="html/P-Keyboard_Master.Properties.Resources.pointer.htm" />
+        <HelpTOCNode Title="ResourceManager Property " Url="html/P-Keyboard_Master.Properties.Resources.ResourceManager.htm" />
+        <HelpTOCNode Title="statek Property " Url="html/P-Keyboard_Master.Properties.Resources.statek.htm" />
+        <HelpTOCNode Title="title Property " Url="html/P-Keyboard_Master.Properties.Resources.title.htm" />
+        <HelpTOCNode Title="znak_pauzy Property " Url="html/P-Keyboard_Master.Properties.Resources.znak_pauzy.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="47f1616f-d3a3-4d8d-8770-6bc91d78cf77" Title="Settings Class" Url="html/T-Keyboard_Master.Properties.Settings.htm">
+      <HelpTOCNode Title="Settings Members" Url="html/AllMembers.T-Keyboard_Master.Properties.Settings.htm" />
+      <HelpTOCNode Id="81b1b7d7-17c3-4c98-ab25-a47440af944e" Title="Settings Fields" Url="html/Fields.T-Keyboard_Master.Properties.Settings.htm">
+        <HelpTOCNode Title="defaultInstance Field" Url="html/F-Keyboard_Master.Properties.Settings.defaultInstance.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Settings Methods" Url="html/Methods.T-Keyboard_Master.Properties.Settings.htm" />
+      <HelpTOCNode Id="59e93916-5483-493b-955a-49645445e30a" Title="Settings Properties" Url="html/Properties.T-Keyboard_Master.Properties.Settings.htm">
+        <HelpTOCNode Title="Default Property " Url="html/P-Keyboard_Master.Properties.Settings.Default.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Settings Events" Url="html/Events.T-Keyboard_Master.Properties.Settings.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

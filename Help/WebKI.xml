@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="background property" Url="html/P-Keyboard_Master.Properties.Resources.background.htm" />
+  <HelpKINode Title="bulletPicture field" Url="html/F-Keyboard_Master.Form1.bulletPicture.htm" />
+  <HelpKINode Title="bullets field" Url="html/F-Keyboard_Master.Form1.bullets.htm" />
+  <HelpKINode Title="button_background property" Url="html/P-Keyboard_Master.Properties.Resources.button_background.htm" />
+  <HelpKINode Title="changeDifficulty method" Url="html/M-Keyboard_Master.Form1.changeDifficulty.htm" />
+  <HelpKINode Title="clear method" Url="html/M-Keyboard_Master.Form1.clear.htm" />
+  <HelpKINode Title="components field" Url="html/F-Keyboard_Master.Form1.components.htm" />
+  <HelpKINode Title="correctLetter method" Url="html/M-Keyboard_Master.Form1.correctLetter.htm" />
+  <HelpKINode Title="createLabels method" Url="html/M-Keyboard_Master.Form1.createLabels.htm" />
+  <HelpKINode Title="Culture property" Url="html/P-Keyboard_Master.Properties.Resources.Culture.htm" />
+  <HelpKINode Title="Default property" Url="html/P-Keyboard_Master.Properties.Settings.Default.htm" />
+  <HelpKINode Title="defaultInstance field" Url="html/F-Keyboard_Master.Properties.Settings.defaultInstance.htm" />
+  <HelpKINode Title="Dispose method">
+    <HelpKINode Title="Dispose Method " Url="html/M-Keyboard_Master.Form1.Dispose.htm" />
+    <HelpKINode Title="Dispose Method " Url="html/Overload-Keyboard_Master.Form1.Dispose.htm" />
+  </HelpKINode>
+  <HelpKINode Title="endGame field" Url="html/F-Keyboard_Master.Form1.endGame.htm" />
+  <HelpKINode Title="exitButton field" Url="html/F-Keyboard_Master.Form1.exitButton.htm" />
+  <HelpKINode Title="exitButton_Click method" Url="html/M-Keyboard_Master.Form1.exitButton_Click.htm" />
+  <HelpKINode Title="exitGame method" Url="html/M-Keyboard_Master.Form1.exitGame.htm" />
+  <HelpKINode Title="Form1 class">
+    <HelpKINode Title="Form1 Class" Url="html/T-Keyboard_Master.Form1.htm" />
+    <HelpKINode Title="Form1 Members" Url="html/AllMembers.T-Keyboard_Master.Form1.htm" />
+    <HelpKINode Title="about Form1 class" Url="html/T-Keyboard_Master.Form1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Keyboard_Master.Form1.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Keyboard_Master.Form1.-ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Keyboard_Master.Form1.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-Keyboard_Master.Form1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Keyboard_Master.Form1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Keyboard_Master.Form1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Form1.bulletPicture field" Url="html/F-Keyboard_Master.Form1.bulletPicture.htm" />
+  <HelpKINode Title="Form1.bullets field" Url="html/F-Keyboard_Master.Form1.bullets.htm" />
+  <HelpKINode Title="Form1.changeDifficulty method" Url="html/M-Keyboard_Master.Form1.changeDifficulty.htm" />
+  <HelpKINode Title="Form1.clear method" Url="html/M-Keyboard_Master.Form1.clear.htm" />
+  <HelpKINode Title="Form1.components field" Url="html/F-Keyboard_Master.Form1.components.htm" />
+  <HelpKINode Title="Form1.correctLetter method" Url="html/M-Keyboard_Master.Form1.correctLetter.htm" />
+  <HelpKINode Title="Form1.createLabels method" Url="html/M-Keyboard_Master.Form1.createLabels.htm" />
+  <HelpKINode Title="Form1.Dispose method">
+    <HelpKINode Title="Dispose Method " Url="html/Overload-Keyboard_Master.Form1.Dispose.htm" />
+    <HelpKINode Title="Dispose Method " Url="html/M-Keyboard_Master.Form1.Dispose.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Form1.endGame field" Url="html/F-Keyboard_Master.Form1.endGame.htm" />
+  <HelpKINode Title="Form1.exitButton field" Url="html/F-Keyboard_Master.Form1.exitButton.htm" />
+  <HelpKINode Title="Form1.exitButton_Click method" Url="html/M-Keyboard_Master.Form1.exitButton_Click.htm" />
+  <HelpKINode Title="Form1.exitGame method" Url="html/M-Keyboard_Master.Form1.exitGame.htm" />
+  <HelpKINode Title="Form1.Form1 constructor" Url="html/M-Keyboard_Master.Form1.-ctor.htm" />
+  <HelpKINode Title="Form1.Form1_KeyDown method" Url="html/M-Keyboard_Master.Form1.Form1_KeyDown.htm" />
+  <HelpKINode Title="Form1.Form1_Load method" Url="html/M-Keyboard_Master.Form1.Form1_Load.htm" />
+  <HelpKINode Title="Form1.gameButton field" Url="html/F-Keyboard_Master.Form1.gameButton.htm" />
+  <HelpKINode Title="Form1.gameButton_Click_1 method" Url="html/M-Keyboard_Master.Form1.gameButton_Click_1.htm" />
+  <HelpKINode Title="Form1.gameTimer field" Url="html/F-Keyboard_Master.Form1.gameTimer.htm" />
+  <HelpKINode Title="Form1.gameTimer_Tick method" Url="html/M-Keyboard_Master.Form1.gameTimer_Tick.htm" />
+  <HelpKINode Title="Form1.generateWords method" Url="html/M-Keyboard_Master.Form1.generateWords.htm" />
+  <HelpKINode Title="Form1.hideMenu method" Url="html/M-Keyboard_Master.Form1.hideMenu.htm" />
+  <HelpKINode Title="Form1.InitializeComponent method" Url="html/M-Keyboard_Master.Form1.InitializeComponent.htm" />
+  <HelpKINode Title="Form1.jezykAngielski field" Url="html/F-Keyboard_Master.Form1.jezykAngielski.htm" />
+  <HelpKINode Title="Form1.jezykAngielski_Click method" Url="html/M-Keyboard_Master.Form1.jezykAngielski_Click.htm" />
+  <HelpKINode Title="Form1.jezykPolski field" Url="html/F-Keyboard_Master.Form1.jezykPolski.htm" />
+  <HelpKINode Title="Form1.jezykPolski_Click method" Url="html/M-Keyboard_Master.Form1.jezykPolski_Click.htm" />
+  <HelpKINode Title="Form1.labelWords field" Url="html/F-Keyboard_Master.Form1.labelWords.htm" />
+  <HelpKINode Title="Form1.lastLetter field" Url="html/F-Keyboard_Master.Form1.lastLetter.htm" />
+  <HelpKINode Title="Form1.pauseButton field" Url="html/F-Keyboard_Master.Form1.pauseButton.htm" />
+  <HelpKINode Title="Form1.pauseButton_Click method" Url="html/M-Keyboard_Master.Form1.pauseButton_Click.htm" />
+  <HelpKINode Title="Form1.score field" Url="html/F-Keyboard_Master.Form1.score.htm" />
+  <HelpKINode Title="Form1.scoreTable method" Url="html/M-Keyboard_Master.Form1.scoreTable.htm" />
+  <HelpKINode Title="Form1.showMenu method" Url="html/M-Keyboard_Master.Form1.showMenu.htm" />
+  <HelpKINode Title="Form1.showScore field" Url="html/F-Keyboard_Master.Form1.showScore.htm" />
+  <HelpKINode Title="Form1.showTime field" Url="html/F-Keyboard_Master.Form1.showTime.htm" />
+  <HelpKINode Title="Form1.speed field" Url="html/F-Keyboard_Master.Form1.speed.htm" />
+  <HelpKINode Title="Form1.startButton field" Url="html/F-Keyboard_Master.Form1.startButton.htm" />
+  <HelpKINode Title="Form1.startButton_Click method" Url="html/M-Keyboard_Master.Form1.startButton_Click.htm" />
+  <HelpKINode Title="Form1.time field" Url="html/F-Keyboard_Master.Form1.time.htm" />
+  <HelpKINode Title="Form1.timer1 field" Url="html/F-Keyboard_Master.Form1.timer1.htm" />
+  <HelpKINode Title="Form1.timer1_Tick method" Url="html/M-Keyboard_Master.Form1.timer1_Tick.htm" />
+  <HelpKINode Title="Form1.title field" Url="html/F-Keyboard_Master.Form1.title.htm" />
+  <HelpKINode Title="Form1.turnOffTimers method" Url="html/M-Keyboard_Master.Form1.turnOffTimers.htm" />
+  <HelpKINode Title="Form1.turnOnTimers method" Url="html/M-Keyboard_Master.Form1.turnOnTimers.htm" />
+  <HelpKINode Title="Form1.user field" Url="html/F-Keyboard_Master.Form1.user.htm" />
+  <HelpKINode Title="Form1.words field" Url="html/F-Keyboard_Master.Form1.words.htm" />
+  <HelpKINode Title="Form1.wordsInFile field" Url="html/F-Keyboard_Master.Form1.wordsInFile.htm" />
+  <HelpKINode Title="Form1.wordsNumber field" Url="html/F-Keyboard_Master.Form1.wordsNumber.htm" />
+  <HelpKINode Title="Form1.wordTime field" Url="html/F-Keyboard_Master.Form1.wordTime.htm" />
+  <HelpKINode Title="Form1.wordTime_Tick method" Url="html/M-Keyboard_Master.Form1.wordTime_Tick.htm" />
+  <HelpKINode Title="Form1_KeyDown method" Url="html/M-Keyboard_Master.Form1.Form1_KeyDown.htm" />
+  <HelpKINode Title="Form1_Load method" Url="html/M-Keyboard_Master.Form1.Form1_Load.htm" />
+  <HelpKINode Title="gameButton field" Url="html/F-Keyboard_Master.Form1.gameButton.htm" />
+  <HelpKINode Title="gameButton_Click_1 method" Url="html/M-Keyboard_Master.Form1.gameButton_Click_1.htm" />
+  <HelpKINode Title="gameTimer field" Url="html/F-Keyboard_Master.Form1.gameTimer.htm" />
+  <HelpKINode Title="gameTimer_Tick method" Url="html/M-Keyboard_Master.Form1.gameTimer_Tick.htm" />
+  <HelpKINode Title="generateWords method" Url="html/M-Keyboard_Master.Form1.generateWords.htm" />
+  <HelpKINode Title="hideMenu method" Url="html/M-Keyboard_Master.Form1.hideMenu.htm" />
+  <HelpKINode Title="InitializeComponent method" Url="html/M-Keyboard_Master.Form1.InitializeComponent.htm" />
+  <HelpKINode Title="jezykAngielski field" Url="html/F-Keyboard_Master.Form1.jezykAngielski.htm" />
+  <HelpKINode Title="jezykAngielski_Click method" Url="html/M-Keyboard_Master.Form1.jezykAngielski_Click.htm" />
+  <HelpKINode Title="jezykPolski field" Url="html/F-Keyboard_Master.Form1.jezykPolski.htm" />
+  <HelpKINode Title="jezykPolski_Click method" Url="html/M-Keyboard_Master.Form1.jezykPolski_Click.htm" />
+  <HelpKINode Title="Keyboard_Master namespace" Url="html/N-Keyboard_Master.htm" />
+  <HelpKINode Title="Keyboard_Master.Form1 class">
+    <HelpKINode Title="Form1 Class" Url="html/T-Keyboard_Master.Form1.htm" />
+    <HelpKINode Title="Form1 Members" Url="html/AllMembers.T-Keyboard_Master.Form1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Keyboard_Master.Program class">
+    <HelpKINode Title="Program Class" Url="html/T-Keyboard_Master.Program.htm" />
+    <HelpKINode Title="Program Members" Url="html/AllMembers.T-Keyboard_Master.Program.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Keyboard_Master.Properties namespace" Url="html/N-Keyboard_Master.Properties.htm" />
+  <HelpKINode Title="Keyboard_Master.Properties.Resources class">
+    <HelpKINode Title="Resources Class" Url="html/T-Keyboard_Master.Properties.Resources.htm" />
+    <HelpKINode Title="Resources Members" Url="html/AllMembers.T-Keyboard_Master.Properties.Resources.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Keyboard_Master.Properties.Settings class">
+    <HelpKINode Title="Settings Class" Url="html/T-Keyboard_Master.Properties.Settings.htm" />
+    <HelpKINode Title="Settings Members" Url="html/AllMembers.T-Keyboard_Master.Properties.Settings.htm" />
+  </HelpKINode>
+  <HelpKINode Title="labelWords field" Url="html/F-Keyboard_Master.Form1.labelWords.htm" />
+  <HelpKINode Title="lastLetter field" Url="html/F-Keyboard_Master.Form1.lastLetter.htm" />
+  <HelpKINode Title="listaSlowAngielskich property" Url="html/P-Keyboard_Master.Properties.Resources.listaSlowAngielskich.htm" />
+  <HelpKINode Title="Main method" Url="html/M-Keyboard_Master.Program.Main.htm" />
+  <HelpKINode Title="pauseButton field" Url="html/F-Keyboard_Master.Form1.pauseButton.htm" />
+  <HelpKINode Title="pauseButton_Click method" Url="html/M-Keyboard_Master.Form1.pauseButton_Click.htm" />
+  <HelpKINode Title="point property" Url="html/P-Keyboard_Master.Properties.Resources.point.htm" />
+  <HelpKINode Title="pointer property" Url="html/P-Keyboard_Master.Properties.Resources.pointer.htm" />
+  <HelpKINode Title="Program class">
+    <HelpKINode Title="Program Class" Url="html/T-Keyboard_Master.Program.htm" />
+    <HelpKINode Title="Program Members" Url="html/AllMembers.T-Keyboard_Master.Program.htm" />
+    <HelpKINode Title="about Program class" Url="html/T-Keyboard_Master.Program.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Keyboard_Master.Program.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Keyboard_Master.Program.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Program.Main method" Url="html/M-Keyboard_Master.Program.Main.htm" />
+  <HelpKINode Title="resourceCulture field" Url="html/F-Keyboard_Master.Properties.Resources.resourceCulture.htm" />
+  <HelpKINode Title="resourceMan field" Url="html/F-Keyboard_Master.Properties.Resources.resourceMan.htm" />
+  <HelpKINode Title="ResourceManager property" Url="html/P-Keyboard_Master.Properties.Resources.ResourceManager.htm" />
+  <HelpKINode Title="Resources class">
+    <HelpKINode Title="Resources Class" Url="html/T-Keyboard_Master.Properties.Resources.htm" />
+    <HelpKINode Title="Resources Members" Url="html/AllMembers.T-Keyboard_Master.Properties.Resources.htm" />
+    <HelpKINode Title="about Resources class" Url="html/T-Keyboard_Master.Properties.Resources.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Keyboard_Master.Properties.Resources.htm" />
+    <HelpKINode Title="constructor" Url="html/M-Keyboard_Master.Properties.Resources.-ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-Keyboard_Master.Properties.Resources.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Keyboard_Master.Properties.Resources.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Keyboard_Master.Properties.Resources.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Resources.background property" Url="html/P-Keyboard_Master.Properties.Resources.background.htm" />
+  <HelpKINode Title="Resources.button_background property" Url="html/P-Keyboard_Master.Properties.Resources.button_background.htm" />
+  <HelpKINode Title="Resources.Culture property" Url="html/P-Keyboard_Master.Properties.Resources.Culture.htm" />
+  <HelpKINode Title="Resources.listaSlowAngielskich property" Url="html/P-Keyboard_Master.Properties.Resources.listaSlowAngielskich.htm" />
+  <HelpKINode Title="Resources.point property" Url="html/P-Keyboard_Master.Properties.Resources.point.htm" />
+  <HelpKINode Title="Resources.pointer property" Url="html/P-Keyboard_Master.Properties.Resources.pointer.htm" />
+  <HelpKINode Title="Resources.resourceCulture field" Url="html/F-Keyboard_Master.Properties.Resources.resourceCulture.htm" />
+  <HelpKINode Title="Resources.resourceMan field" Url="html/F-Keyboard_Master.Properties.Resources.resourceMan.htm" />
+  <HelpKINode Title="Resources.ResourceManager property" Url="html/P-Keyboard_Master.Properties.Resources.ResourceManager.htm" />
+  <HelpKINode Title="Resources.Resources constructor" Url="html/M-Keyboard_Master.Properties.Resources.-ctor.htm" />
+  <HelpKINode Title="Resources.statek property" Url="html/P-Keyboard_Master.Properties.Resources.statek.htm" />
+  <HelpKINode Title="Resources.title property" Url="html/P-Keyboard_Master.Properties.Resources.title.htm" />
+  <HelpKINode Title="Resources.znak_pauzy property" Url="html/P-Keyboard_Master.Properties.Resources.znak_pauzy.htm" />
+  <HelpKINode Title="score field" Url="html/F-Keyboard_Master.Form1.score.htm" />
+  <HelpKINode Title="scoreTable method" Url="html/M-Keyboard_Master.Form1.scoreTable.htm" />
+  <HelpKINode Title="Settings class">
+    <HelpKINode Title="Settings Class" Url="html/T-Keyboard_Master.Properties.Settings.htm" />
+    <HelpKINode Title="Settings Members" Url="html/AllMembers.T-Keyboard_Master.Properties.Settings.htm" />
+    <HelpKINode Title="about Settings class" Url="html/T-Keyboard_Master.Properties.Settings.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-Keyboard_Master.Properties.Settings.htm" />
+    <HelpKINode Title="events" Url="html/Events.T-Keyboard_Master.Properties.Settings.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-Keyboard_Master.Properties.Settings.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-Keyboard_Master.Properties.Settings.htm" />
+    <HelpKINode Title="properties" Url="html/Properties.T-Keyboard_Master.Properties.Settings.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Settings.Default property" Url="html/P-Keyboard_Master.Properties.Settings.Default.htm" />
+  <HelpKINode Title="Settings.defaultInstance field" Url="html/F-Keyboard_Master.Properties.Settings.defaultInstance.htm" />
+  <HelpKINode Title="showMenu method" Url="html/M-Keyboard_Master.Form1.showMenu.htm" />
+  <HelpKINode Title="showScore field" Url="html/F-Keyboard_Master.Form1.showScore.htm" />
+  <HelpKINode Title="showTime field" Url="html/F-Keyboard_Master.Form1.showTime.htm" />
+  <HelpKINode Title="speed field" Url="html/F-Keyboard_Master.Form1.speed.htm" />
+  <HelpKINode Title="startButton field" Url="html/F-Keyboard_Master.Form1.startButton.htm" />
+  <HelpKINode Title="startButton_Click method" Url="html/M-Keyboard_Master.Form1.startButton_Click.htm" />
+  <HelpKINode Title="statek property" Url="html/P-Keyboard_Master.Properties.Resources.statek.htm" />
+  <HelpKINode Title="time field" Url="html/F-Keyboard_Master.Form1.time.htm" />
+  <HelpKINode Title="timer1 field" Url="html/F-Keyboard_Master.Form1.timer1.htm" />
+  <HelpKINode Title="timer1_Tick method" Url="html/M-Keyboard_Master.Form1.timer1_Tick.htm" />
+  <HelpKINode Title="title field" Url="html/F-Keyboard_Master.Form1.title.htm" />
+  <HelpKINode Title="title property" Url="html/P-Keyboard_Master.Properties.Resources.title.htm" />
+  <HelpKINode Title="turnOffTimers method" Url="html/M-Keyboard_Master.Form1.turnOffTimers.htm" />
+  <HelpKINode Title="turnOnTimers method" Url="html/M-Keyboard_Master.Form1.turnOnTimers.htm" />
+  <HelpKINode Title="user field" Url="html/F-Keyboard_Master.Form1.user.htm" />
+  <HelpKINode Title="words field" Url="html/F-Keyboard_Master.Form1.words.htm" />
+  <HelpKINode Title="wordsInFile field" Url="html/F-Keyboard_Master.Form1.wordsInFile.htm" />
+  <HelpKINode Title="wordsNumber field" Url="html/F-Keyboard_Master.Form1.wordsNumber.htm" />
+  <HelpKINode Title="wordTime field" Url="html/F-Keyboard_Master.Form1.wordTime.htm" />
+  <HelpKINode Title="wordTime_Tick method" Url="html/M-Keyboard_Master.Form1.wordTime_Tick.htm" />
+  <HelpKINode Title="znak_pauzy property" Url="html/P-Keyboard_Master.Properties.Resources.znak_pauzy.htm" />
+</HelpKI>

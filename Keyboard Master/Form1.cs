@@ -1,4 +1,17 @@
-﻿using System;
+﻿// ***********************************************************************
+// Assembly         : Keyboard Master
+// Author           : Małgorzata Rucińska
+// Created          : 07-01-2017
+//
+// Last Modified By : Hosi
+// Last Modified On : 01-07-2018
+// ***********************************************************************
+// <copyright file="Form1.cs" company="Politechnika Gdańska">
+//     Copyright ©  2017
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System;
 using System.IO;
 using System.Windows.Forms;
 
@@ -11,29 +24,72 @@ namespace Keyboard_Master
     /// <seealso cref="System.Windows.Forms.Form" />
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// The time
+        /// </summary>
         int time = 0;
-        int speed = 25;
+        /// <summary>
+        /// The speed
+        /// </summary>
+        int speed = 5;
+        /// <summary>
+        /// The score
+        /// </summary>
         int score = 0;
+        /// <summary>
+        /// The words number
+        /// </summary>
         int wordsNumber = 1;
+        /// <summary>
+        /// The last letter typed correctly
+        /// </summary>
         char lastLetter;
-        Random randomX = new Random();
+        /// <summary>
+        /// The words
+        /// </summary>
         string[] words;
+        /// <summary>
+        /// The end game
+        /// </summary>
         bool endGame = false;
+        /// <summary>
+        /// The words in file
+        /// </summary>
         int wordsInFile;
+        Random randomX = new Random();
+        /// <summary>
+        /// The label words
+        /// </summary>
         Label[] labelWords = new Label[102];
+        /// <summary>
+        /// The bullets
+        /// </summary>
         PictureBox[] bullets = new PictureBox[50];
+        System.Media.SoundPlayer hitSound = new System.Media.SoundPlayer("hit.wav");
+        System.Media.SoundPlayer selectSound = new System.Media.SoundPlayer("select.wav");
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form1"/> class.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Handles the Load event of the Form1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            showMenu();
+            ShowMenu();
         }
 
-        private void showMenu()
+        /// <summary>
+        /// Shows the game menu.
+        /// </summary>
+        private void ShowMenu()
         {
             user.Hide();
             pauseButton.Hide();
@@ -42,7 +98,10 @@ namespace Keyboard_Master
             user.Hide();
         }
 
-        private void hideMenu()
+        /// <summary>
+        /// Hides the game menu.
+        /// </summary>
+        private void HideMeny()
         {
             startButton.Hide();
             exitButton.Hide();
@@ -52,87 +111,136 @@ namespace Keyboard_Master
             pauseButton.Show();
         }
 
-        private void exitGame()
+        /// <summary>
+        /// Exits the game and shows scores and menu that allows to exit game or start it again.
+        /// </summary>
+        private void ExitGame()
         {
             exitButton.Show();
             gameButton.Text = "RESET";
             pauseButton.Hide();
             gameButton.Show();
-            turnOffTimers();
-            clear();
-            scoreTable();
+            TurnOffTimers();
+            user.Hide();
+            ScoreTable();
             endGame = true;
         }
 
+        /// <summary>
+        /// Handles the Click event of the startButton control. Shows buttons that allow player to choose game mode.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void startButton_Click(object sender, EventArgs e)
         {
-            hideMenu();
+            HideMeny();
             jezykAngielski.Show();
             jezykPolski.Show();
+            selectSound.Play();
         }
 
+        /// <summary>
+        /// Handles the Click event of the jezykPolski control. Pushing this button by user loads polish word list and starts game in choosed game mode;
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void jezykPolski_Click(object sender, EventArgs e)
         {
             words = File.ReadAllLines("listaSlowPolskich.txt");
             wordsInFile = File.ReadAllLines("listaSlowPolskich.txt").Length;
-            turnOnTimers();
+            TurnOnTimers();
             showTime.Show();
             showScore.Show();
             user.Show();
-            hideMenu();
+            HideMeny();
             jezykPolski.Hide();
             jezykAngielski.Hide();
-            createLabels();
+            CreateLabels();
+            selectSound.Play();
         }
 
+        /// <summary>
+        /// Handles the Click event of the jezykAngielski control.Pushing this button by user loads english word list and starts game in choosed game mode;
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void jezykAngielski_Click(object sender, EventArgs e)
         {
             words = File.ReadAllLines("listaSlowAngielskich.txt");
             wordsInFile = File.ReadAllLines("listaSlowAngielskich.txt").Length;
-            turnOnTimers();
+            TurnOnTimers();
             showTime.Show();
             showScore.Show();
             user.Show();
-            hideMenu();
+            HideMeny();
             jezykPolski.Hide();
             jezykAngielski.Hide();
-            createLabels();
+            CreateLabels();
+            selectSound.Play();
         }
 
+        /// <summary>
+        /// Handles the 1 event of the gameButton_Click control. 
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void gameButton_Click_1(object sender, EventArgs e)
         {
-            turnOnTimers();
+            TurnOnTimers();
             gameButton.Hide();
             exitButton.Hide();
             if (endGame == true)
                 Application.Restart();
+            selectSound.Play();
         }
 
+        /// <summary>
+        /// Handles the Click event of the pauseButton control. Pushin this button pauses the game.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void pauseButton_Click(object sender, EventArgs e)
         {
-            turnOffTimers();
+            TurnOffTimers();
             gameButton.Text = "PAUSE";
             gameButton.Show();
             exitButton.Show();
             jezykAngielski.Hide();
             jezykPolski.Hide();
+            selectSound.Play();
         }
 
+        /// <summary>
+        /// Handles the Click event of the exitButton control. Pushing this button exits application.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            selectSound.Play();
         }
 
+        /// <summary>
+        /// Handles the KeyDown event of the Form1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="KeyEventArgs"/> instance containing the event data.</param>
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             string key = e.KeyCode.ToString().ToLower();
-            correctLetter(key);
+            CorrectLetter(key);
 
+            //if esc is pressed game will be closed.
             if (e.KeyCode == Keys.Escape)
                 this.Close();
         }
 
-        private void correctLetter(string key)
+        /// <summary>
+        /// Checking if input letter is equal to any first letter of words in the game. If is - letter is removed and score counter is increased. This function also ensures that letter will be removed only from one word at the time.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        private void CorrectLetter(string key)
         {
             foreach (Control enemy in this.Controls)
             {
@@ -141,13 +249,13 @@ namespace Keyboard_Master
                     string temp = enemy.Text;
                     if (temp[0] == key[0])
                     {
-
                         if (!lastLetter.Equals(key[0]))
                         {
                             temp = temp.Remove(0, 1);
                             enemy.Text = temp;
                             lastLetter = key[0];
                             score++;
+                            hitSound.Play();
                             showScore.Text = "Score: " + score;
                         }
                         else
@@ -157,49 +265,56 @@ namespace Keyboard_Master
             }
         }
 
+        /// <summary>
+        /// Handles the Tick event of the timer1 control and shows current game time.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             time++;
             showTime.Text = "Time: " + time;
         }
 
+        /// <summary>
+        /// Handles the Tick event of the wordTime control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void wordTime_Tick(object sender, EventArgs e)
         {
-            generateWords(wordsNumber);
+            GenerateWords(wordsNumber);
         }
 
+        /// <summary>
+        /// Handles the Tick event of the gameTimer control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-
-            foreach (Control obj in this.Controls)
+            foreach (Control enemy in this.Controls)
             {
-                if (obj is Label && (string)obj.Tag == "word")
+                if (enemy is Label && (string)enemy.Tag == "word")
                 {
-                    obj.Top += speed;
-                    if (obj.Top + obj.Height > this.ClientSize.Height)
+                    enemy.Top += speed;
+                    if (enemy.Top + enemy.Height > this.ClientSize.Height)
                     {
-                        exitGame();
+                        ExitGame();
                     }
-                    if (obj.Text.Length < 1)
+                    if (enemy.Text.Length < 1)
                     {
-                        this.Controls.Remove(obj);
+                        this.Controls.Remove(enemy);
                     }
                 }
-
             }
-
-            if (score % 20 == 0 && score > 20)
-            {
-                speed++;
-            }
-
-            if (score % 40 == 0 && score > 40)
-            {
-                wordsNumber++;
-            }
+            ChangeDifficulty();
         }
 
-        private void createLabels()
+        /// <summary>
+        /// Creates the labels.
+        /// </summary>
+        private void CreateLabels()
         {
             for (int i = 0; i < wordsInFile - 1; i++)
             {
@@ -215,21 +330,31 @@ namespace Keyboard_Master
             }
         }
 
-        private void turnOnTimers()
+        /// <summary>
+        /// Turns on the timers.
+        /// </summary>
+        private void TurnOnTimers()
         {
             timer1.Start();
             wordTime.Start();
             gameTimer.Start();
         }
 
-        private void turnOffTimers()
+        /// <summary>
+        /// Turns off the timers.
+        /// </summary>
+        private void TurnOffTimers()
         {
             timer1.Stop();
             gameTimer.Stop();
             wordTime.Stop();
         }
 
-        private void generateWords(int ilosc)
+        /// <summary>
+        /// Generates the words taken from loaded file in difficulty based on current score.
+        /// </summary>
+        /// <param name="ilosc">The ilosc.</param>
+        private void GenerateWords(int ilosc)
         {
             Random cyfra = new Random();
             for (int i = 0; i < ilosc; i++)
@@ -264,7 +389,10 @@ namespace Keyboard_Master
             }
         }
 
-        private void clear()
+        /// <summary>
+        /// Clears this instance from controls
+        /// </summary>
+        private void Clear()
         {
             foreach (Control element in this.Controls)
             {
@@ -274,14 +402,27 @@ namespace Keyboard_Master
 
         }
 
-        private void scoreTable()
+        /// <summary>
+        /// Shows the score when game is over.
+        /// </summary>
+        private void ScoreTable()
         {
             showScore.Top = +240;
-            showScore.Left = +410;
+            showScore.Left = +400;
             showTime.Top = +240;
-            showTime.Left = +530;
-            user.Hide();
-            clear();
+            showTime.Left = +540;
+            Clear();
+        }
+
+        /// <summary>
+        /// Changes the difficulty of the game upon current user score.
+        /// </summary>
+        private void ChangeDifficulty()
+        {
+            if (score % 20 == 0 && score > 20)
+            {
+                speed++;
+            }
         }
     }
 }
