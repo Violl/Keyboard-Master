@@ -5,20 +5,23 @@ using System.Windows.Forms;
 namespace Keyboard_Master
 {
 
+    /// <summary>
+    /// Class Form1.
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     public partial class Form1 : Form
     {
-        bool correct = false;
         int time = 0;
-        int locationX;
-        int locationY;
-        int speed = 5;
+        int speed = 25;
         int score = 0;
-        Random randomY = new Random();
+        int wordsNumber = 1;
+        char lastLetter;
         Random randomX = new Random();
-        bool pauseButtonBool = false;
         string[] words;
+        bool endGame = false;
         int wordsInFile;
         Label[] labelWords = new Label[102];
+        PictureBox[] bullets = new PictureBox[50];
 
         public Form1()
         {
@@ -52,10 +55,13 @@ namespace Keyboard_Master
         private void exitGame()
         {
             exitButton.Show();
-            timer1.Stop();
-            gameTimer.Stop();
-            wordTime.Stop();
-            deleteWords();
+            gameButton.Text = "RESET";
+            pauseButton.Hide();
+            gameButton.Show();
+            turnOffTimers();
+            clear();
+            scoreTable();
+            endGame = true;
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -69,9 +75,7 @@ namespace Keyboard_Master
         {
             words = File.ReadAllLines("listaSlowPolskich.txt");
             wordsInFile = File.ReadAllLines("listaSlowPolskich.txt").Length;
-            timer1.Start();
-            gameTimer.Start();
-            wordTime.Start();
+            turnOnTimers();
             showTime.Show();
             showScore.Show();
             user.Show();
@@ -85,9 +89,7 @@ namespace Keyboard_Master
         {
             words = File.ReadAllLines("listaSlowAngielskich.txt");
             wordsInFile = File.ReadAllLines("listaSlowAngielskich.txt").Length;
-            timer1.Start();
-            gameTimer.Start();
-            wordTime.Start();
+            turnOnTimers();
             showTime.Show();
             showScore.Show();
             user.Show();
@@ -97,34 +99,18 @@ namespace Keyboard_Master
             createLabels();
         }
 
-        private void gameButton_Click(object sender, EventArgs e)
-        {
-            if (pauseButtonBool == true)
-            {
-                timer1.Start();
-                wordTime.Start();
-                pauseButtonBool = false;
-                gameButton.Hide();
-                exitButton.Hide();
-            }
-        }
-
         private void gameButton_Click_1(object sender, EventArgs e)
         {
-            timer1.Start();
-            wordTime.Start();
-            gameTimer.Start();
+            turnOnTimers();
             gameButton.Hide();
             exitButton.Hide();
-            pauseButtonBool = false;
+            if (endGame == true)
+                Application.Restart();
         }
 
         private void pauseButton_Click(object sender, EventArgs e)
         {
-            pauseButtonBool = true;
-            timer1.Stop();
-            gameTimer.Stop();
-            wordTime.Stop();
+            turnOffTimers();
             gameButton.Text = "PAUSE";
             gameButton.Show();
             exitButton.Show();
@@ -144,12 +130,6 @@ namespace Keyboard_Master
 
             if (e.KeyCode == Keys.Escape)
                 this.Close();
-
-            if (correct == true)
-            {
-                score++;
-                showScore.Text = "Score: " + score;
-            }
         }
 
         private void correctLetter(string key)
@@ -161,14 +141,17 @@ namespace Keyboard_Master
                     string temp = enemy.Text;
                     if (temp[0] == key[0])
                     {
-                        correct = true;
-                        temp = temp.Remove(0, 1);
-                        enemy.Text = temp;
-                    }
 
-                    else
-                    {
-                        correct = false;
+                        if (!lastLetter.Equals(key[0]))
+                        {
+                            temp = temp.Remove(0, 1);
+                            enemy.Text = temp;
+                            lastLetter = key[0];
+                            score++;
+                            showScore.Text = "Score: " + score;
+                        }
+                        else
+                            lastLetter = '\0';
                     }
                 }
             }
@@ -182,31 +165,24 @@ namespace Keyboard_Master
 
         private void wordTime_Tick(object sender, EventArgs e)
         {
-            generateWords(1);
-
+            generateWords(wordsNumber);
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            foreach (Control enemy in this.Controls)
+
+            foreach (Control obj in this.Controls)
             {
-                if (enemy is Label && (string)enemy.Tag == "word")
+                if (obj is Label && (string)obj.Tag == "word")
                 {
-                    enemy.Top += speed;
-                    if (enemy.Top + enemy.Height > this.ClientSize.Height)
+                    obj.Top += speed;
+                    if (obj.Top + obj.Height > this.ClientSize.Height)
                     {
                         exitGame();
                     }
-                }
-            }
-
-            foreach (Control enemy in this.Controls)
-            {
-                if (enemy is Label && (string)enemy.Tag == "word")
-                {
-                    if (enemy.Text.Length < 1)
+                    if (obj.Text.Length < 1)
                     {
-                        this.Controls.Remove(enemy);
+                        this.Controls.Remove(obj);
                     }
                 }
 
@@ -215,6 +191,11 @@ namespace Keyboard_Master
             if (score % 20 == 0 && score > 20)
             {
                 speed++;
+            }
+
+            if (score % 40 == 0 && score > 40)
+            {
+                wordsNumber++;
             }
         }
 
@@ -234,25 +215,73 @@ namespace Keyboard_Master
             }
         }
 
+        private void turnOnTimers()
+        {
+            timer1.Start();
+            wordTime.Start();
+            gameTimer.Start();
+        }
+
+        private void turnOffTimers()
+        {
+            timer1.Stop();
+            gameTimer.Stop();
+            wordTime.Stop();
+        }
+
         private void generateWords(int ilosc)
         {
             Random cyfra = new Random();
             for (int i = 0; i < ilosc; i++)
             {
-                this.Controls.Add(labelWords[cyfra.Next(0, wordsInFile)]);
+                int caseSwitch = 1;
+                if (score > 20 && score < 50) caseSwitch = 2;
+                if (score >= 50 && score < 70) caseSwitch = 3;
+                if (score >= 70 && score < 90) caseSwitch = 4;
+                if (score >= 90) caseSwitch = 5;
+
+                switch (caseSwitch)
+                {
+                    case 1:
+                        this.Controls.Add(labelWords[cyfra.Next(0, wordsInFile / 5)]);
+                        break;
+                    case 2:
+                        this.Controls.Add(labelWords[cyfra.Next(wordsInFile / 5, wordsInFile * 2 / 5)]);
+                        break;
+                    case 3:
+                        this.Controls.Add(labelWords[cyfra.Next(wordsInFile * 2 / 5, wordsInFile * 3 / 5)]);
+                        break;
+                    case 4:
+                        this.Controls.Add(labelWords[cyfra.Next(wordsInFile * 3 / 5, wordsInFile * 4 / 5)]);
+                        break;
+                    case 5:
+                        this.Controls.Add(labelWords[cyfra.Next(wordsInFile * 4 / 5, wordsInFile)]);
+                        break;
+                    default:
+                        this.Controls.Add(labelWords[cyfra.Next(0, wordsInFile)]);
+                        break;
+                }
             }
         }
 
-        private void deleteWords()
+        private void clear()
         {
-            foreach (Control enemy in this.Controls)
+            foreach (Control element in this.Controls)
             {
-                if (enemy is Label && (string)enemy.Tag == "word")
-                {
-                    this.Controls.Remove(enemy);
-                }
-
+                if (element is Label && (string)element.Tag == "word")
+                    this.Controls.Remove(element);
             }
+
+        }
+
+        private void scoreTable()
+        {
+            showScore.Top = +240;
+            showScore.Left = +410;
+            showTime.Top = +240;
+            showTime.Left = +530;
+            user.Hide();
+            clear();
         }
     }
 }

@@ -2,7 +2,6 @@
 gala
 gaz
 szew
-
 cukier
 woda
 flora
